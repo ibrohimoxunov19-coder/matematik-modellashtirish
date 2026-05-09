@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matematik Modellashturish</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">📚 Matematik Modellashturish</div>
+            <div class="lang-switch">
+                <button onclick="setLang('uz')" class="lang-btn active">O'zbek</button>
+                <button onclick="setLang('ru')" class="lang-btn">Русский</button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container">
+            <h1 id="title">Matematik Modellashturish</h1>
+            <p id="subtitle">O'zbek va Rus tilida chiroyli tushuntirish va vizual misollar</p>
+            <a href="#chapters" class="cta-btn" id="cta-text">Boshlash</a>
+        </div>
+    </header>
+
+    <div class="container">
+        <section id="chapters" class="chapters">
+            <h2 id="chapters-title">Bo'limlar</h2>
+            
+            <div class="chapter-grid">
+                <div class="chapter-card" onclick="openChapter('chapter1')">
+                    <h3>1-BOB</h3>
+                    <p id="ch1-desc">Modellashturish Nazariyasi</p>
+                    <span class="badge">6 mavzu</span>
+                </div>
+                
+                <div class="chapter-card" onclick="openChapter('chapter2')">
+                    <h3>2-BOB</h3>
+                    <p id="ch2-desc">Masalalar va Texnologiyalar</p>
+                    <span class="badge">8 mavzu</span>
+                </div>
+                
+                <div class="chapter-card" onclick="openChapter('chapter3')">
+                    <h3>3-BOB</h3>
+                    <p id="ch3-desc">Hayotiy va Amaliy Masalalar</p>
+                    <span class="badge">8 mavzu</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Chapter 1 Modal -->
+    <div id="chapter1" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeChapter('chapter1')">&times;</span>
+            <h2 id="ch1-title">1-BOB: Modellashturish Nazariyasi va Uning Nazariy Asoslari</h2>
+            
+            <div class="section">
+                <h3 id="sec1-1">1.1 § Matematik modellashturish fanining maqsad va vazifalari</h3>
+                <p id="sec1-1-desc">Matematik modellashturish - bu murakkab jarayonlarni va tizimlarni soddalashtirish va ularni matematik formulalar bilan ifodalash sanoati.</p>
+                
+                <div class="diagram">
+                    <svg width="100%" height="300" viewBox="0 0 500 300">
+                        <!-- Real Dunyo -->
+                        <rect x="20" y="20" width="150" height="80" fill="#3498db" stroke="#2c3e50" stroke-width="2" rx="5"/>
+                        <text x="95" y="65" font-size="18" fill="white" text-anchor="middle" font-weight="bold" id="real-world">Real Dunyo</text>
+                        
+                        <!-- Arrow 1 -->
+                        <path d="M 170 60 L 220 60" stroke="#e74c3c" stroke-width="3" marker-end="url(#arrowhead)"/>
+                        <text x="195" y="45" font-size="12" fill="#e74c3c" id="abstract">Abstraktlash</text>
+                        
+                        <!-- Model -->
+                        <rect x="220" y="20" width="150" height="80" fill="#2ecc71" stroke="#2c3e50" stroke-width="2" rx="5"/>
+                        <text x="295" y="65" font-size="18" fill="white" text-anchor="middle" font-weight="bold" id="model">Matematik Model</text>
+                        
+                        <!-- Arrow 2 -->
+                        <path d="M 295 100 L 295 130" stroke="#9b59b6" stroke-width="3" marker-end="url(#arrowhead)"/>
+                        <text x="310" y="120" font-size="12" fill="#9b59b6" id="solution">Hal etish</text>
+                        
+                        <!-- Solution -->
+                        <rect x="220" y="130" width="150" height="80" fill="#f39c12" stroke="#2c3e50" stroke-width="2" rx="5"/>
+                        <text x="295" y="175" font-size="18" fill="white" text-anchor="middle" font-weight="bold" id="result">Natija</text>
+                        
+                        <!-- Arrow 3 -->
+                        <path d="M 220 170 L 170 170" stroke="#1abc9c" stroke-width="3" marker-end="url(#arrowhead)"/>
+                        <text x="180" y="190" font-size="12" fill="#1abc9c" id="verify">Tekshirish</text>
+                        
+                        <defs>
+                            <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                                <polygon points="0 0, 10 3, 0 6" fill="currentColor" />
+                            </marker>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3 id="sec1-2">1.2 § Tizimlarni tadbiq qilishda modellashtirishning o'rni</h3>
+                <p id="sec1-2-desc">Modellashturish tizimlarning xavfsiz va samarali boshqarish uchun muhim asbob hisoblanadi.</p>
+            </div>
+            
+            <div class="section">
+                <h3 id="sec1-3">1.3 § Model tushunchasi va modellashturish</h3>
+                <p id="sec1-3-desc">Model - bu haqiqiy ob'ektning soddalashtirilgan ifodasidir.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chapter 2 Modal -->
+    <div id="chapter2" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeChapter('chapter2')">&times;</span>
+            <h2 id="ch2-title">2-BOB: Modellashtirishni Masalalari va Ularni Varatish Texnologiyasi</h2>
+            
+            <div class="section">
+                <h3 id="sec2-1">2.1 § Kontseptual model tushunchasi</h3>
+                <p id="sec2-1-desc">Kontseptual model - bu tizim tuzilishining umumiy tasavvuridir.</p>
+                
+                <div class="diagram">
+                    <svg width="100%" height="250" viewBox="0 0 500 250">
+                        <!-- Input -->
+                        <circle cx="50" cy="125" r="30" fill="#3498db" stroke="#2c3e50" stroke-width="2"/>
+                        <text x="50" y="130" font-size="12" fill="white" text-anchor="middle" font-weight="bold" id="input">Kirish</text>
+                        
+                        <!-- Arrow -->
+                        <path d="M 80 125 L 120 125" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+                        
+                        <!-- Process -->
+                        <rect x="120" y="85" width="100" height="80" fill="#2ecc71" stroke="#2c3e50" stroke-width="2" rx="5"/>
+                        <text x="170" y="125" font-size="14" fill="white" text-anchor="middle" font-weight="bold" id="process">Jarayon</text>
+                        
+                        <!-- Arrow -->
+                        <path d="M 220 125 L 260 125" stroke="#2c3e50" stroke-width="2" marker-end="url(#arrowhead)"/>
+                        
+                        <!-- Output -->
+                        <circle cx="310" cy="125" r="30" fill="#e74c3c" stroke="#2c3e50" stroke-width="2"/>
+                        <text x="310" y="130" font-size="12" fill="white" text-anchor="middle" font-weight="bold" id="output">Chiqish</text>
+                        
+                        <!-- Feedback -->
+                        <path d="M 310 155 Q 170 200 170 155" stroke="#f39c12" stroke-width="2" stroke-dasharray="5,5" marker-end="url(#arrowhead)"/>
+                        <text x="240" y="185" font-size="12" fill="#f39c12" id="feedback">Teskari aloqa</text>
+                        
+                        <defs>
+                            <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                                <polygon points="0 0, 10 3, 0 6" fill="#2c3e50" />
+                            </marker>
+                        </defs>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Chapter 3 Modal -->
+    <div id="chapter3" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeChapter('chapter3')">&times;</span>
+            <h2 id="ch3-title">3-BOB: Hayotiy va Amaliy Masalalarning Matematik Modellari</h2>
+            
+            <div class="section">
+                <h3 id="sec3-1">3.1 § Muhandislik masalalarining matematik modellari</h3>
+                <p id="sec3-1-desc">Muhandislik masalalarida matematik modellashturish asosiy rol o'ynaydi.</p>
+                
+                <div class="example">
+                    <h4 id="example-title">Misolai: Issiqlik o'tkazish masalasi</h4>
+                    <p id="example-desc">Agar bir ob'ekt 100°C da bo'lib, atrofi 20°C bo'lsa, ob'ektning 1 soatdan so'ng harorati qancha bo'ladi?</p>
+                    
+                    <div class="formula">
+                        <p>T(t) = T<sub>atrofi</sub> + (T<sub>boshlang'ich</sub> - T<sub>atrofi</sub>) × e<sup>-kt</sup></p>
+                        <p>T(t) = 20 + (100 - 20) × e<sup>-0.1×1</sup></p>
+                        <p>T(1) ≈ 20 + 80 × 0.905 = <strong>92.4°C</strong></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p id="footer-text">© 2026 Matematik Modellashturish | M.Olimov, O.Jakbarov</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
